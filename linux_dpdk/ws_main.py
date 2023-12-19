@@ -57,6 +57,8 @@ clang_flags = ['-Wno-null-conversion',
 
 gcc_flags = ['-Wall',
              '-Werror',
+             '-Wno-error=maybe-uninitialized', # Additional warnings in gcc-11
+             '-Wno-dangling-pointer', # Added in gcc-12, disabled due to unrecognized < gcc-12
              '-Wno-literal-suffix',
              '-Wno-sign-compare',
              '-Wno-strict-aliasing',
